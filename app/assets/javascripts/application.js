@@ -10,6 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require js/jquery-3.3.1.min
+//= require js/jquery.multi-select
+//= require js/jquery.slimscroll
+//= require js/bootstrap.bundle
+//= require js/buttons.bootstrap4.min
+//= require js/dataTables.bootstrap4.min
+//= require js/data-table
+//= require js/main-js
+
+
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
+// require_tree .
