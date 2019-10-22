@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'employee/index'
-
   root :to => "startup#index"
   get 'startup/index'
 
