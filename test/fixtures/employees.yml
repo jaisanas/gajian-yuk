@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  npwp: MyText
+  no_ktp: MyText
+  disburse_credit: MyText
+  status: MyText
+  level: MyText
+  salary: 9.99
+  join_date: 
+
+two:
+  name: MyText
+  npwp: MyText
+  no_ktp: MyText
+  disburse_credit: MyText
+  status: MyText
+  level: MyText
+  salary: 9.99
+  join_date: 

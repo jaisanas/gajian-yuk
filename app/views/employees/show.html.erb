@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employee.name %>
+</p>
+
+<p>
+  <strong>Npwp:</strong>
+  <%= @employee.npwp %>
+</p>
+
+<p>
+  <strong>No ktp:</strong>
+  <%= @employee.no_ktp %>
+</p>
+
+<p>
+  <strong>Disburse credit:</strong>
+  <%= @employee.disburse_credit %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @employee.status %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @employee.level %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @employee.salary %>
+</p>
+
+<p>
+  <strong>Join date:</strong>
+  <%= @employee.join_date %>
+</p>
+
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>

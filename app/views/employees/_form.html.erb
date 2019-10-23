@@ -1,0 +1,57 @@
+<%= form_with(model: employee, local: true) do |form| %>
+  <% if employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_area :name, id: :employee_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :npwp %>
+    <%= form.text_area :npwp, id: :employee_npwp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_ktp %>
+    <%= form.text_area :no_ktp, id: :employee_no_ktp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :disburse_credit %>
+    <%= form.text_area :disburse_credit, id: :employee_disburse_credit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_area :status, id: :employee_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :level %>
+    <%= form.text_area :level, id: :employee_level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary %>
+    <%= form.text_field :salary, id: :employee_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :join_date %>
+    <%= form.text_field :join_date, id: :employee_join_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
