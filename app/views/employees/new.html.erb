@@ -252,20 +252,55 @@ John Abraham</h5>
                                     <div class="form-group row">
                                         <label class="col-12 col-sm-3 col-form-label text-sm-right">Name</label>
                                         <div class="col-12 col-sm-8 col-lg-6">
-                                            <%= f.text_field :name, class: "form-control", placeholder: "Type something"%>
-                                            <!-- <input type="text" required="" placeholder="Type something" class="form-control"> -->
-
+                                            <%= f.text_field :name, class: "form-control", placeholder: "Type Name Here"%>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-12 col-sm-3 col-form-label text-sm-right">NPWP</label>
                                         <div class="col-12 col-sm-8 col-lg-6">
-                                            <input type="text" required="" placeholder="Type something" class="form-control">
+                                            <%= f.text_field :npwp, class: "form-control", placeholder: "Type NPWP Here"%>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right">No KTP</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <%= f.text_field :no_ktp, class: "form-control", placeholder: "Type NPWP Here"%>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right">Disburse Credit</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <%= f.number_field :disburse_credit, class: "form-control", placeholder: "Type NPWP Here"%>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right">Status</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <%= f.text_field :status, class: "form-control", placeholder: "Type NPWP Here"%>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right">Level</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <%= f.text_field :level, class: "form-control", placeholder: "Type NPWP Here"%>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right">Salary</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <%= f.number_field :salary, class: "form-control", placeholder: "Type NPWP Here"%>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-3 col-form-label text-sm-right">Join Date</label>
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <%= f.date_field :join_date, class: "form-control", placeholder: "Type NPWP Here"%>
                                         </div>
                                     </div>
                                     <div class="form-group row text-right">
                                         <div class="col col-sm-10 col-lg-9 offset-sm-1 offset-lg-0">
-                                            <button type="submit" class="btn btn-space btn-primary">Submit</button>
+                                            <!-- <button type="submit" class="btn btn-space btn-primary">Submit</button> -->
+                                            <%= f.submit "Submit", class: "btn btn-space btn-primary"%>
                                             <button class="btn btn-space btn-secondary">Cancel</button>
                                         </div>
                                     </div>
