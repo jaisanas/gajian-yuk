@@ -37,7 +37,6 @@ gem 'bootstrap-sass'
 
 gem 'font-awesome-rails'
 gem 'pg','0.20'
-gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
