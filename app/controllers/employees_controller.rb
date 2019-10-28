@@ -4,7 +4,7 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.json
   def index
-    @employees = Employee.all
+    @employees = Employee.order(created_at: :desc)
   end
 
   # GET /employees/1
@@ -24,7 +24,8 @@ class EmployeesController < ApplicationController
   # POST /employees
   # POST /employees.json
   def create
-    @employee = Employee.new(employee_params)
+    default_employee_deposit_param = {:employee_deposit => employee_params[:salary]}
+    @employee = Employee.new(employee_params.merge(default_employee_deposit_param))
 
     respond_to do |format|
       if @employee.save

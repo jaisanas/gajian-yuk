@@ -131,10 +131,10 @@ John Abraham</h5>
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Employee Management<span class="badge badge-success">6</span></a>
+                                <%= link_to "<i class='far fa-money-bill-alt'></i>Employee Deposit Details<span class='badge badge-success'>6</span>".html_safe, employees_path, class: "nav-link active" %>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="far fa-money-bill-alt"></i>Employee Deposit Details<span class="badge badge-success">6</span></a>
+                                <%= link_to "<i class='far fa-money-bill-alt'></i>Employee Deposit Details<span class='badge badge-success'>6</span>".html_safe, employee_deposit_index_path, class: "nav-link" %>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fab fa-fw fa-wpforms"></i>Employee Disburse Request<span class="badge badge-success">6</span></a>

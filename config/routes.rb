@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'employee_deposit/index'
+
   # resources :employees
   root :to => "employees#index"
 
