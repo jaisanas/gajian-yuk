@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191029213844) do
+ActiveRecord::Schema.define(version: 20191031160655) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "disbursement_requests", force: :cascade do |t|
+    t.bigint "employees_id"
+    t.text "message"
+    t.decimal "amount"
+    t.datetime "disbursement_date"
+    t.decimal "employee_salary_balance"
+    t.text "status"
+    t.integer "hr_admin_id"
+    t.integer "employee_id"
+    t.integer "montly_used_credit"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["employees_id"], name: "index_disbursement_requests_on_employees_id"
+  end
 
   create_table "employees", force: :cascade do |t|
     t.text "name"
