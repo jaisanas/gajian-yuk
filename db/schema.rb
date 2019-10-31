@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191026192807) do
+ActiveRecord::Schema.define(version: 20191029213844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20191026192807) do
     t.text "bank_account_name"
     t.text "bank_account_number"
     t.text "bank_name"
+    t.text "phone_number"
+    t.text "email"
   end
 
 end
