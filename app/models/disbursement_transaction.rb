@@ -1,0 +1,2 @@
+class DisbursementTransaction < ApplicationRecord
+end

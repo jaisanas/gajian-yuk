@@ -1,0 +1,17 @@
+<%= form_with(model: disbursement_transaction_log, local: true) do |form| %>
+  <% if disbursement_transaction_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(disbursement_transaction_log.errors.count, "error") %> prohibited this disbursement_transaction_log from being saved:</h2>
+
+      <ul>
+      <% disbursement_transaction_log.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

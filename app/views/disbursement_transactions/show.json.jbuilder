@@ -1,0 +1,1 @@
+json.partial! "disbursement_transactions/disbursement_transaction", disbursement_transaction: @disbursement_transaction

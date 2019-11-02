@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :disbursement_transaction_logs
+  resources :disbursement_transactions
   resources :disbursement_requests
   get 'employee_deposit/index'
 

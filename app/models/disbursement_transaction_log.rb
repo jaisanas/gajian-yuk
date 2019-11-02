@@ -1,0 +1,2 @@
+class DisbursementTransactionLog < ApplicationRecord
+end
