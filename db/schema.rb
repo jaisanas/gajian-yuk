@@ -30,14 +30,26 @@ ActiveRecord::Schema.define(version: 20191102055704) do
     t.index ["employees_id"], name: "index_disbursement_requests_on_employees_id"
   end
 
-  create_table "disbursement_transaction_logs", force: :cascade do |t|
+  create_table "disbursement_transactions", force: :cascade do |t|
+    t.bigint "disbursement_requests_id"
+    t.integer "monthly_disbursement_number"
+    t.text "status"
+    t.integer "finance_admin_id"
+    t.integer "disbursement_request_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["disbursement_requests_id"], name: "index_disbursement_transactions_on_disbursement_requests_id"
   end
 
-  create_table "disbursement_transactions", force: :cascade do |t|
+  create_table "dt_logs", force: :cascade do |t|
+    t.bigint "disbursement_transactions_id"
+    t.integer "monthly_disbursement_number"
+    t.text "status"
+    t.decimal "disburse_amount"
+    t.integer "disbursement_transaction_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["disbursement_transactions_id"], name: "index_dt_logs_on_disbursement_transactions_id"
   end
 
   create_table "employees", force: :cascade do |t|
