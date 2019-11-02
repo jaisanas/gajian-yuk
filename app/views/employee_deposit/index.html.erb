@@ -137,13 +137,13 @@ John Abraham</h5>
                                 <%= link_to "<i class='far fa-money-bill-alt'></i>Employee Deposit Details<span class='badge badge-success'>6</span>".html_safe, employee_deposit_index_path, class: "nav-link active" %>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fab fa-fw fa-wpforms"></i>Employee Disburse Request<span class="badge badge-success">6</span></a>
+                                <%= link_to "<i class='fab fa-fw fa-wpforms'></i>Employee Disburse Request<span class='badge badge-success'>6</span>".html_safe, disbursement_requests_path, class: "nav-link" %>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fas fa-clipboard-check"></i>Employee Disburse Transactions<span class="badge badge-success">6</span></a>
+                                <%= link_to "<i class='fas fa-clipboard-check'></i>Employee Disburse Request<span class='badge badge-success'>6</span>".html_safe, disbursement_transactions_path, class: "nav-link" %>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fas fa-align-center"></i>Employe Disburse History<span class="badge badge-success">6</span></a>
+                                <%= link_to "<i class='fas fa-align-center'></i>Employe Disburse History<span class='badge badge-success'>6</span>".html_safe, disbursement_transaction_logs_path, class: "nav-link" %>
                             </li>
                             <li class="nav-divider">
                                 Features
