@@ -140,7 +140,7 @@ John Abraham</h5>
                                 <%= link_to "<i class='fab fa-fw fa-wpforms'></i>Employee Disburse Request<span class='badge badge-success'>6</span>".html_safe, disbursement_requests_path, class: "nav-link" %>
                             </li>
                             <li class="nav-item ">
-                                <%= link_to "<i class='fas fa-clipboard-check'></i>Employee Disburse Request<span class='badge badge-success'>6</span>".html_safe, disbursement_transactions_path, class: "nav-link" %>
+                                <%= link_to "<i class='fas fa-clipboard-check'></i>Employee Disburse Transaction<span class='badge badge-success'>6</span>".html_safe, disbursement_transactions_path, class: "nav-link" %>
                             </li>
                             <li class="nav-item ">
                                 <%= link_to "<i class='fas fa-align-center'></i>Employe Disburse History<span class='badge badge-success'>6</span>".html_safe, disbursement_transaction_logs_path, class: "nav-link active" %>
@@ -258,12 +258,20 @@ John Abraham</h5>
                                                 <th>Bank Account Name</th>
                                                 <th>Bank Account Number</th>
                                                 <th>Bank Name</th>
-                                                <th>Monthly Disbursement Number</th>
                                                 <th>Status</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                           
+                                           <% @disbursement_transaction_logs.each do |disbursement_transaction_log| %>
+                                                <tr>
+                                                    <td><%= disbursement_transaction_log.disbursement_transaction.disbursement_request.employee.name%></td>
+                                                    <td><%= disbursement_transaction_log.disbursement_transaction.disbursement_request.employee.id %></td>
+                                                    <td><%= disbursement_transaction_log.disbursement_transaction.disbursement_request.employee.bank_account_name %></td>
+                                                    <td><%= disbursement_transaction_log.disbursement_transaction.disbursement_request.employee.bank_account_number %></td>
+                                                    <td><%= disbursement_transaction_log.disbursement_transaction.disbursement_request.amount %></td>
+                                                    <td><%= disbursement_transaction_log.status %></td>
+                                                </tr>
+                                            <% end %>
                                         </tbody>
                                     </table>
                                 </div>

@@ -30,6 +30,7 @@ class EmployeesController < ApplicationController
     respond_to do |format|
       if @employee.save
         # format.html { redirect_to @employee, notice: 'Employee was successfully created.' }
+        flash[:success] = "New employee has been created"
         format.html { redirect_to action: "index", notice: 'Employee was successfully created.' }
         format.json { render :show, status: :created, location: @employee }
       else
@@ -71,6 +72,6 @@ class EmployeesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def employee_params
-      params.require(:employee).permit(:name, :npwp, :no_ktp, :disburse_credit, :status, :level, :salary, :join_date)
+      params.require(:employee).permit(:name, :npwp, :no_ktp, :disburse_credit, :status, :level, :salary, :join_date, :bank_account_name, :bank_account_number, :bank_name, :phone_number, :email)
     end
 end

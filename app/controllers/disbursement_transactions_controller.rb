@@ -4,7 +4,9 @@ class DisbursementTransactionsController < ApplicationController
   # GET /disbursement_transactions
   # GET /disbursement_transactions.json
   def index
-    @disbursement_transactions = DisbursementTransaction.all
+    @disbursement_transactions = DisbursementTransaction.where(status: "PENDING")
+    @disbursement_transactions = @disbursement_transactions.sort_by &:created_at
+
   end
 
   # GET /disbursement_transactions/1
@@ -19,6 +21,20 @@ class DisbursementTransactionsController < ApplicationController
 
   # GET /disbursement_transactions/1/edit
   def edit
+  end
+
+  def disburse
+    disbursement_transaction = DisbursementTransaction.find(params[:id])
+    disbursement_transaction.status = "Disbursed" 
+    disbursement_transaction.save
+    disbursement_transaction_log = DisbursementTransactionLog.new
+    disbursement_transaction_log.disbursement_transaction_id = params[:id]
+    disbursement_transaction_log.status = "SUCCESS"
+    disbursement_transaction_log.save
+    respond_to do |format|
+      flash[:success] = "Amount of partially salary has been disbursed"
+      format.html { redirect_to action: "index", notice: 'Disbursement transaction was successfully created.' }
+    end
   end
 
   # POST /disbursement_transactions

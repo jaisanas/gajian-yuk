@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
   resources :disbursement_transaction_logs
-  resources :disbursement_transactions
-  resources :disbursement_requests
+  resources :disbursement_transactions do
+    member do
+      post :disburse
+    end
+  end
+  resources :disbursement_requests do
+    member do
+      post :approve
+      post :reject
+    end
+  end
   get 'employee_deposit/index'
 
   # resources :employees
